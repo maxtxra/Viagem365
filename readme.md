@@ -13,8 +13,8 @@
 ## Trabalhando com migrations:
 
 ### Criar uma migration
-1. `sequelize migration:generate --name criar_tabela_alunos`
-2. `npx sequelize-cli migration:generate --name criar_tabela_alunos`
+1. `sequelize migration:generate --name criar_tabela_users`
+2. `npx sequelize-cli migration:generate --name criar_tabela_users`
 ### Rodar uma migration. Opções:
 1. Opção nº 1: `sequelize db:migrate`
 2. Opção nº 2: `npx sequelize db:migrate`

@@ -1,5 +1,5 @@
-const express = require('express') //Framework da aplicação
-const cors = require('cors') // Biblioteca utilizada para inserir headers http
+const express = require('express') 
+const cors = require('cors') 
 const { connection } = require('./database/connection') // Configuração de acesso ao banco de dados
 
 const PORT_API = process.env.PORT_API 
@@ -22,7 +22,7 @@ class Server {
       await connection.authenticate(); // Tentativa de conexão com o banco de dados
       console.log('Conexão bem sucedida!');
     } catch (error) {
-      console.error('Não foi possível conectar no banco de dados.', error);
+      console.error('Não foi possível conectar no banco de dados arruma isso aí.', error);
       throw error
     }
   }
