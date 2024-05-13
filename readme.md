@@ -1,5 +1,3 @@
-# Semana 10 - Introdução ao Sequelize
-
 ## Rodar o repositório:
 
 ### Na primeira vez é necessário instalar as dependencias:
