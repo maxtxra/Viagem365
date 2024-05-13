@@ -19,7 +19,8 @@ class Server {
 
   async database() {
     try {
-      await connection.authenticate(); // Tentativa de conexão com o banco de dados
+      await connection.authenticate(); 
+      console.log('Conexão bem sucedida!');
       console.log('Conexão bem sucedida!');
     } catch (error) {
       console.error('Não foi possível conectar no banco de dados arruma isso aí.', error);
