@@ -23,7 +23,9 @@ routes.get('/home', (req, res) => {
 
 routes.post('/usuarios', async (req,res) => {
 
-    const id = req.body.id
+
+    try {
+        const id = req.body.id
     const name = req.body.name
     const email = req.body.email
     const gender = req.body.gender
@@ -49,6 +51,25 @@ routes.post('/usuarios', async (req,res) => {
         country: country,
     });
     res.json(`Você cadastrou com sucesso seu cadastro ${usuarios.name}, obrigado! sua chave é ${usuarios.id}`)
+        
+    } catch (error) {
+        res.status(500).json({error: 'Não foi possível realizar o cadastro'})
+    }
+
+    
 });
+
+
+
+
+routes.get('/usuarios', async (req, res) => {
+    const findUsers = await Usuarios.findAll()
+    res.json(findUsers)
+
+
+
+});
+
+
 
 module.exports = routes
