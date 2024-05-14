@@ -1,6 +1,7 @@
 const express = require('express') 
 const cors = require('cors') 
 const { connection } = require('./database/connection') // Configuração de acesso ao banco de dados
+const routes = require('./routes/routes')
 
 const PORT_API = process.env.PORT_API 
 
@@ -9,6 +10,7 @@ class Server {
   { 
     this.middlewares(server) // Instância do argumento da função para a função middlewares
     this.database()  // Instância da função database
+    server.use(routes) // routes js
     this.initializeServer(server) // Instância da função initializeServer
   }
 
@@ -21,7 +23,7 @@ class Server {
     try {
       await connection.authenticate(); 
       console.log('Conexão bem sucedida!');
-      console.log('Conexão bem sucedida!');
+      console.log('Conexão Aleluia!');
     } catch (error) {
       console.error('Não foi possível conectar no banco de dados arruma isso aí.', error);
       throw error

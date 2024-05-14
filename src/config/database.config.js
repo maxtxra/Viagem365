@@ -1,8 +1,6 @@
 const { config } = require('dotenv')
 config();
 
-
-
 module.exports = {
   development: {
   dialect: process.env.DIALECT, 

@@ -22,19 +22,19 @@ module.exports = {
         allowNull: false
       },
       coordenates: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
         allowNull: false
       },
       country: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
         allowNull: false
       },
       state: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
         allowNull: false
       },
       city: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
         allowNull: false
       },
       created_at: {
