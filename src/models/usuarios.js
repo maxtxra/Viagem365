@@ -26,11 +26,15 @@ const Usuarios = connection.define('usuarios365', {
     city: {
         type: DataTypes.STRING
     },
-    state: {
+    statecountry: {
         type: DataTypes.STRING
     },
     country: {
         type: DataTypes.STRING
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
 }, {
     tableName: 'usuarios365'

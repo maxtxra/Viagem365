@@ -29,7 +29,7 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false
       },
-      state: {
+      statecountry: {
         type: Sequelize.TEXT,
         allowNull: false
       },

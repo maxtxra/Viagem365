@@ -10,6 +10,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       email: {
         allowNull: false,
         type: Sequelize.STRING(320) // Capacidade adequada conforme RFC 5321
@@ -42,7 +46,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      state: {
+      statecountry: {
         allowNull: false,
         type: Sequelize.STRING
       },

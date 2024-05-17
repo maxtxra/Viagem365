@@ -18,7 +18,7 @@ connection.define('destinos365', {
     city: {
         type: DataTypes.STRING
     },
-    state: {
+    statecountry: {
         type: DataTypes.STRING
     },
     country: {
