@@ -211,7 +211,7 @@ routes.post('/login', async (req, res) => {
         if(!usuario) {
             return res.status(404).json({message:'Usuário não encontrado.'})
         }
-
+ 
         res.status(200).json({mensagem:"Esse é seu token JWT: JWT"})
 
     } catch (error) {
