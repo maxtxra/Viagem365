@@ -34,3 +34,5 @@ https://sequelize.org/docs/v6/core-concepts/model-basics/
 `npm install -g sequelize-cli` 
 ### instalar o dotenv
 `npm install dotenv`
+### instalar Json Web Token ( JWT )
+`npm install jsonwebtoken`

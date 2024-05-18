@@ -2,8 +2,8 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('destinos365', {
-      destinyid: {
+    await queryInterface.createTable('destinos', {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
@@ -26,30 +26,40 @@ module.exports = {
         allowNull: false
       },
       country: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: false
       },
-      statecountry: {
-        type: Sequelize.TEXT,
+      state: {
+        type: Sequelize.STRING,
         allowNull: false
       },
       city: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: false
       },
-      created_at: {
+      userId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'usuarios',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
+      },
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       },
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       }
     });
   },
+
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('destinos365');
+    await queryInterface.dropTable('destinos');
   }
 };

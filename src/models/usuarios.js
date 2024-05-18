@@ -1,8 +1,11 @@
 const { DataTypes } = require('sequelize');
 const { connection } = require('../database/connection');
 
-const Usuarios = connection.define('usuarios365', {
+const Usuarios = connection.define('usuarios', {
     name: {
+        type: DataTypes.STRING
+    },
+    lname: {
         type: DataTypes.STRING
     },
     email: {
@@ -35,9 +38,14 @@ const Usuarios = connection.define('usuarios365', {
     password: {
         type: DataTypes.STRING,
         allowNull: false
-    }
+    },
+
 }, {
-    tableName: 'usuarios365'
+    tableName: 'usuarios'
 });
+
+
+
+
 
 module.exports = Usuarios;

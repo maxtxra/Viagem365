@@ -1,9 +1,8 @@
 'use strict';
 
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('usuarios365', {
+    await queryInterface.createTable('usuarios', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -16,9 +15,13 @@ module.exports = {
       },
       email: {
         allowNull: false,
-        type: Sequelize.STRING(320) // Capacidade adequada conforme RFC 5321
+        type: Sequelize.STRING(320)
       },
       name: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      lname:{
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -26,7 +29,7 @@ module.exports = {
         allowNull: true,
         type: Sequelize.STRING
       },
-      document_number: { // Corrigido: adicionado dois-pontos
+      document_number: { 
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -66,6 +69,6 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('usuarios365'); // Corrigido para corresponder à tabela criada
+    await queryInterface.dropTable('usuarios');
   }
 };

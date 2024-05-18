@@ -3,7 +3,7 @@ version: '3'
 services:
   db:
     image: postgres
-    container_name: meu-servidor-postgres
+    container_name: serverexpress
     ports:
       - "5432:5432"
     environment:
