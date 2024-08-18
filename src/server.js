@@ -1,9 +1,11 @@
 const express = require('express') 
 const cors = require('cors') 
-const { connection } = require('./database/connection') // Configuração de acesso ao banco de dados
+const { connection } = require('./database/connection')
 const routes = require('./routes/routes')
-
 const PORT_API = process.env.PORT_API 
+
+
+
 
 class Server {
   constructor (server = express())// Argumento do constructor auto iniciado da aplicação para usarmos as devidas funções do express
@@ -23,7 +25,6 @@ class Server {
     try {
       await connection.authenticate(); 
       console.log('Conexão bem sucedida!');
-      console.log('Conexão Aleluia!');
     } catch (error) {
       console.error('Não foi possível conectar no banco de dados arruma isso aí.', error);
       throw error

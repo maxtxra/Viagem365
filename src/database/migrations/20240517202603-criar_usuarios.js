@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       lname:{
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       gender: {
@@ -30,27 +30,27 @@ module.exports = {
         type: Sequelize.STRING
       },
       document_number: { 
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       dt_birth: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
       phone: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       post_code: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       city: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       statecountry: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       country: {
@@ -59,11 +59,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       }
     });
   },
